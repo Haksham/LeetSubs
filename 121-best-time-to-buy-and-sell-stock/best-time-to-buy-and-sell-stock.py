@@ -5,9 +5,9 @@ class Solution:
         n=len(prices)
         r=1
         while r<n:
-            if prices[r]>prices[l]:
-                mx=max(prices[r]-prices[l],mx)
-            else:
+            if prices[r]-prices[l]>mx:
+                mx=prices[r]-prices[l]
+            elif prices[r]-prices[l]<0:
                 l=r
             r+=1
         return mx
