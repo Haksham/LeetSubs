@@ -1,9 +1,13 @@
 from collections import Counter
 class Solution:
     def countBadPairs(self, nums: List[int]) -> int:
-        counter = Counter()
-        c = 0
-        for i, x in enumerate(nums):
-            c += i-counter[i-x]
-            counter[i-x]+= 1
-        return c
+        c = 0 
+        n = len(nums)
+        new = [ num - index for index, num in enumerate(nums)]
+        c = Counter(new)
+        tot = n*(n-1)/2 
+        print(new,c)
+        for key, val in c.items(): 
+            if val!=1:
+                tot -= val*(val-1)/2
+        return int(tot)
