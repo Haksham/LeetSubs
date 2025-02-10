@@ -26,4 +26,3 @@ class Solution:
             k+=1
         for i in range(m+n):
             nums1[i]=fin[i]
-        print(fin,nums1)
