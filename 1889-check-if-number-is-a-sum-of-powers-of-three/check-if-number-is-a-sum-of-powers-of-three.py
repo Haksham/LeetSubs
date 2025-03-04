@@ -6,9 +6,7 @@ class Solution:
             ls.append(3**i)
             i+=1
         for i in range(len(ls)-1,-1,-1):
-            if n==0:
-                return True
-            if ls[i]<=n and n-ls[i]>=0:
+            if n-ls[i]>=0:
                 n-=ls[i]
                 if n==0:
                     return True
