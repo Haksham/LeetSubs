@@ -2,8 +2,16 @@ class Solution {
     public int findNumbers(int[] nums) {
         int c=0;
         for(int i=0;i<nums.length;i++){
-            String k=Integer.toString(nums[i]);
-            if(k.length()%2==0){c++;}
+            int n=nums[i];
+            int ct=0;
+            while(n>0){
+                n=n/10;
+                ct++;
+            }
+            if(ct%2==0){
+                c++;
+            }
+            // or convert integer to string and calc length.
         }
         return c;
     }
