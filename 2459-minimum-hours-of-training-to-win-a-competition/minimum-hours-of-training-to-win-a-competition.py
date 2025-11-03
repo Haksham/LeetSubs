@@ -11,5 +11,4 @@ class Solution:
 
             initialEnergy-=energy[i]
             initialExperience+=experience[i]
-            print(ans)
         return ans
